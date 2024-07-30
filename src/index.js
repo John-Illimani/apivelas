@@ -6,6 +6,12 @@ import { sequelize } from "./database/database.js";
 import './models/Projects.js';
 import './models/Task.js';
 
+/* para las variables de entorno */
+
+import { PORT } from "./routes/config.js"
+
+
+
 async function main() {
   try {
 
@@ -17,9 +23,9 @@ async function main() {
     console.log("conexion exitosa a la base de datos");
 
 
-    const port = 5000;
-    app.listen(port);
-    console.log("el servidor se esta ejecutando en el puerto ", port);
+   
+    app.listen(PORT);
+    console.log("el servidor se esta ejecutando en el puerto ", PORT);
     /* con esto tengo un servidor basico */
 
     /* ------------------ ------------------ ------------------ ------------------ ------------------*/
